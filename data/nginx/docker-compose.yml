@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    nginx:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                tag list: kenson_nginx
+        restart: always
+        image: kenson_nginx
+        ports:
+            - "7777:80"
+        container_name: kenson
